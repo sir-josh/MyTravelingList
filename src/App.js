@@ -36,8 +36,7 @@ function Form({ onAddItem }) {
 
 		if (!description) return;
 
-		const newItem = { quantity, description, packed: false };
-		console.log(newItem);
+		const newItem = { quantity, description, packed: false, id: crypto.randomUUID() };
 		onAddItem(newItem);
 
 		setDescription("");
